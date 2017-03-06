@@ -7,7 +7,6 @@ import java.util.List;
 /**
  * 元信息
  *
- * Created by lirui on 2014/10/30.
  */
 class MapperMeta {
   private Class<?> entity;
