@@ -35,7 +35,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Intercepts({@Signature(type = Executor.class, method = "query",
         args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}),
         @Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class}),
-        @Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class}),
+        @Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class, Integer.class}),
         @Signature(type = ResultSetHandler.class, method = "handleResultSets", args = {Statement.class})})
 public class PaginationAutoMapInterceptor extends BaseInterceptor implements Interceptor {
     private static final String GENERATE_RESULT_MAP_NAME = "GeneratedResultMap";
