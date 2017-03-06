@@ -319,9 +319,9 @@ public class PaginationAutoMapInterceptor extends BaseInterceptor implements Int
      */
     private ResultMapping buildResultMapping(Configuration configuration, String property, String column, Class<?> javaType, List<ResultFlag> flags) {
         ResultMapping.Builder builder = new ResultMapping.Builder(configuration, property, column, javaType);
-        builder.flags(flags == null ? new ArrayList<ResultFlag>() : flags);
-        builder.composites(new ArrayList<ResultMapping>());
-        builder.notNullColumns(new HashSet<String>());
+        builder.flags(flags == null ? new ArrayList<>() : flags);
+        builder.composites(new ArrayList<>());
+        builder.notNullColumns(new HashSet<>());
         return builder.build();
     }
 

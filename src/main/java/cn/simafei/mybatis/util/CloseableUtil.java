@@ -1,8 +1,5 @@
 package cn.simafei.mybatis.util;
 
-/**
- * 工具类
- */
 public class CloseableUtil {
   private CloseableUtil() {
   }
